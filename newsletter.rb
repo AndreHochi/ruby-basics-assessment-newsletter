@@ -30,6 +30,13 @@ ARTICLES = [
 def calculate_recipients
   # Using the SUBSCRIBERS and UNSUBSCRIBED arrays,
   # write a method that will return an array of only the subscribers who haven't unsubscribed
+  
+  # Generate a return array.
+  # Grab iterate though SUBSCRIBERS and grab a subscriber from SUBSCRIBER.
+  # Check if the subscriber has unsubscribed.
+  # If they have unsubscribed, push the subscriber to the return array.
+  # Return the array. 
+
   currently_subbed = []
   SUBSCRIBERS.each do |subscriber|
     if !UNSUBSCRIBED.include?(subscriber)
@@ -98,11 +105,10 @@ end
 def run
    #We want our program to print three articles by default,
    #but we can change that number here
+
   print_newsletter(3)
 end
 
 # When we run "ruby newsletter.rb" in the command line,
 # the 'run' method will be called because we're calling it below.
 run
-
-#p print_recipients
